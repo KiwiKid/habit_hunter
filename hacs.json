@@ -1,6 +1,7 @@
 {
   "name": "Habit Hunter",
-  "country": ["NZ"],
-  "render_readme": "true",
-  "iot_class": ["Assumed State"]
+  "hacs": "1.6.0",
+  "domains": ["binary_sensor", "sensor", "switch"],
+  "iot_class": "Cloud Polling",
+  "homeassistant": "0.118.0"
 }

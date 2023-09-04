@@ -1,0 +1,12 @@
+{
+  "_output_dir": "/home/gregcummingpersonal/src/local",
+  "_repo_dir": "/home/gregcummingpersonal/.cookiecutters/cookiecutter-homeassistant-custom-component",
+  "_template": "gh:oncleben31/cookiecutter-homeassistant-custom-component",
+  "class_name_prefix": "HabitHunter",
+  "domain_name": "habit_hunter",
+  "friendly_name": "Habit Hunter",
+  "github_user": "KiwiKid",
+  "project_name": "habit-hunter",
+  "test_suite": "yes",
+  "version": "0.1"
+}

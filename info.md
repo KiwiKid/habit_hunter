@@ -1,66 +1,60 @@
-<h1>Correct this for this app</h1>
+[![GitHub Release][releases-shield]][releases]
+[![GitHub Activity][commits-shield]][commits]
+[![License][license-shield]][license]
 
-<p><a href="https://www.buymeacoffee.com/6rF5cQl" rel="nofollow" target="_blank"><img src="https://camo.githubusercontent.com/c070316e7fb193354999ef4c93df4bd8e21522fa/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76312e7376673f6c6162656c3d4275792532306d6525323061253230636f66666565266d6573736167653d25463025394625413525413826636f6c6f723d626c61636b266c6f676f3d6275792532306d6525323061253230636f66666565266c6f676f436f6c6f723d7768697465266c6162656c436f6c6f723d366634653337" alt="Buy me a coffee" data-canonical-src="https://img.shields.io/static/v1.svg?label=Buy%20me%20a%20coffee&amp;message=%F0%9F%A5%A8&amp;color=black&amp;logo=buy%20me%20a%20coffee&amp;logoColor=white&amp;labelColor=b0c4de" style="max-width:100%;"></a></p>
+[![hacs][hacsbadge]][hacs]
+[![Project Maintenance][maintenance-shield]][user_profile]
+[![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
-# Anniversary sensor for upcoming events for Home Assistant
+[![Discord][discord-shield]][discord]
+[![Community Forum][forum-shield]][forum]
 
-The state of the sensor will be the number of days till the first upcoming event from the sensor's defined list.
-Other related information (sorted list of all events, closest event's icon, event name and anniversary, etc.) will be added as attributes.
+**This component will set up the following platforms.**
 
-#### Installation
+| Platform        | Description                         |
+| --------------- | ----------------------------------- |
+| `binary_sensor` | Show something `True` or `False`.   |
+| `sensor`        | Show info from API.                 |
+| `switch`        | Switch something `True` or `False`. |
 
-The easiest way to install it is through [HACS (Home Assistant Community Store)](https://github.com/hacs/integration),
-search for <i>Upcoming anniversary</i> in the Integrations.<br />
+![example][exampleimg]
 
-#### Configuration:
+{% if not installed %}
 
-Define sensor with the following configuration parameters:<br />
+## Installation
 
----
+1. Click install.
+1. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Habit Hunter".
 
-| Name                | Optional | `Default`  | Description                                                                                 |
-| :------------------ | :------- | :--------- | :------------------------------------------------------------------------------------------ |
-| anniversaries       | **Y**    | ``         | list of events (see below)                                                                  |
-| date_format         | **Y**    | `%Y-%m-%d` | date format as per [strftime](https://strftime.org).\n %c and %x formats are not supported. |
-| items               | **Y**    | `0`        | number of upcoming events to add to the events list attribute                               |
-| multiple            | **Y**    | `false`    | add multiple events when on same date - obsoleted. It will get removed in the next release  |
-| name                | **Y**    | `events`   | name of the sensor                                                                          |
-| unit_of_measurement | **Y**    | ``         | custom text, usually days. You may express it in the language of your choice.               |
+{% endif %}
 
----
+## Configuration is done in the UI
 
-Date formats of the defined events have to match date_format parameter, otherwise the event will be ignored and a warning message will be logged.<br>
-Since the events are considered yearly repeating events, it does not make sense adding format strings like weekday (%A), time, etc. The date_format parameter refers entirely to this custom integration, do not overcomplicate things, keep it simple. All date_format related exceptions will make that event to get ignored.
+<!---->
 
-## Configuration parameters for the list of events:
+## Credits
 
-| Name  | Optional | `Default`      | Description                                                                                                                                            |
-| :---- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| event | **Y**    | ``             | name of the event                                                                                                                                      |
-| date  | **Y**    | ``             | date of the event. It can contain year information in which case the anniversary attribute will be the number of years passed till the next occurence. |
-| icon  | **Y**    | `mdi:calendar` | icon of the event                                                                                                                                      |
-| type  | **Y**    | `event`        | your text choice to denote the event type. Might be useful for templating.                                                                             |
+This project was generated from [@oncleben31](https://github.com/oncleben31)'s [Home Assistant Custom Component Cookiecutter](https://github.com/oncleben31/cookiecutter-homeassistant-custom-component) template.
+
+Code template was mainly taken from [@Ludeeus](https://github.com/ludeeus)'s [integration_blueprint][integration_blueprint] template
 
 ---
 
-The sensor will set attributes like:
-![Anniversary attributes](https://raw.githubusercontent.com/amaximus/anniversary/main/anniversary3.png)
-
-## Example
-
-```
-platform: anniversary
-name: events
-multiple: true
-anniversaries:
-  - event: 'Doug birthday'
-    date: '2000-1-15'
-  - event: 'Steve Butabi'
-    date: '2000-09-15'
-    icon: mdi:cake-variant
-  - event: 'Chazz birthday'
-    date: '9-15'
-    icon: mdi:cake-variant
-  - event: 'Frank the tank'
-    date: '1998-8-18'
-```
+[integration_blueprint]: https://github.com/custom-components/integration_blueprint
+[buymecoffee]: https://www.buymeacoffee.com/ludeeus
+[buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
+[commits-shield]: https://img.shields.io/github/commit-activity/y/KiwiKid/habit-hunter.svg?style=for-the-badge
+[commits]: https://github.com/KiwiKid/habit-hunter/commits/main
+[hacs]: https://hacs.xyz
+[hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
+[discord]: https://discord.gg/Qa5fW2R
+[discord-shield]: https://img.shields.io/discord/330944238910963714.svg?style=for-the-badge
+[exampleimg]: example.png
+[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
+[forum]: https://community.home-assistant.io/
+[license]: https://github.com/KiwiKid/habit-hunter/blob/main/LICENSE
+[license-shield]: https://img.shields.io/github/license/KiwiKid/habit-hunter.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/badge/maintainer-%40KiwiKid-blue.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/KiwiKid/habit-hunter.svg?style=for-the-badge
+[releases]: https://github.com/KiwiKid/habit-hunter/releases
+[user_profile]: https://github.com/KiwiKid
