@@ -1,7 +1,6 @@
 {
   "name": "Habit Hunter",
   "country": ["NZ"],
-  "domains": ["habits"],
   "render_readme": "true",
   "iot_class": ["Assumed State"]
 }
