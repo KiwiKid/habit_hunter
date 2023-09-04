@@ -1,0 +1,9 @@
+{
+  "domain": "habit_hunter",
+  "name": "Habit Hunter",
+  "documentation": "https://github.com/KiwiKid/habit_hunter",
+  "dependencies": [],
+  "codeowners": ["@KiwiKid"],
+  "requirements": [],
+  "version": "0.1"
+}
