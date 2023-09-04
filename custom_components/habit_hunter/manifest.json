@@ -7,5 +7,6 @@
   "codeowners": ["@KiwiKid"],
   "requirements": [],
   "iot_class": "calculated",
+  "render_readme": "true",
   "version": "0.1"
 }
