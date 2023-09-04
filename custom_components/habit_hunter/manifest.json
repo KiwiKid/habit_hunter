@@ -1,9 +1,11 @@
 {
-  "domain": "habit_hunter",
+  "domain": "habits",
   "name": "Habit Hunter",
   "documentation": "https://github.com/KiwiKid/habit_hunter",
+  "issue_tracker": "https://github.com/KiwiKid/habit_hunter/issues",
   "dependencies": [],
   "codeowners": ["@KiwiKid"],
   "requirements": [],
+  "iot_class": "calculated",
   "version": "0.1"
 }
