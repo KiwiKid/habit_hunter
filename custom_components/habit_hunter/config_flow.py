@@ -11,13 +11,15 @@ from .const import CONF_USERNAME
 from .const import DOMAIN
 from .const import PLATFORMS
 
+PLATFORM_SCHEMA = cv.PLATFORM_SCHEMA
+
 
 class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     """Config flow for habit_hunter."""
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL
-
+    
     def __init__(self):
         """Initialize."""
         self._errors = {}
