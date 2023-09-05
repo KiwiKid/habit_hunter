@@ -6,7 +6,7 @@ DOMAIN_DATA = f"{DOMAIN}_data"
 VERSION = "0.1"
 
 ATTRIBUTION = "Data provided by http://jsonplaceholder.typicode.com/"
-ISSUE_URL = "https://github.com/KiwiKid/habit-hunter/issues"
+ISSUE_URL = "https://github.com/KiwiKid/habit_hunter/issues"
 
 # Icons
 ICON = "mdi:format-quote-close"

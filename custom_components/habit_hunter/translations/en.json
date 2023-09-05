@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Habit Hunter",
-        "description": "If you need help with the configuration have a look here: https://github.com/KiwiKid/habit-hunter",
+        "description": "If you need help with the configuration have a look here: https://github.com/KiwiKid/habit_hunter",
         "data": {
           "username": "Username",
           "password": "Password"

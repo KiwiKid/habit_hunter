@@ -2,7 +2,7 @@
 Custom integration to integrate Habit Hunter with Home Assistant.
 
 For more details about this integration, please refer to
-https://github.com/KiwiKid/habit-hunter
+https://github.com/KiwiKid/habit_hunter
 """
 import asyncio
 import logging
