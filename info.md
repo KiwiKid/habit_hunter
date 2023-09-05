@@ -30,6 +30,8 @@
 
 ## Configuration is done in the UI
 
+<h1><s>WIP - This project is in development</s></h1>
+
 <!---->
 
 ## Credits
