@@ -49,8 +49,8 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
     @staticmethod
     @callback
-    def async_get_options_flow(config_entry):
-        return HabitHunterOptionsFlowHandler(config_entry)
+    def async_get_options_flow():
+        return HabitHunterOptionsFlowHandler()
 
     async def _show_config_form(self, user_input):  # pylint: disable=unused-argument
         """Show the configuration form to edit location data."""
