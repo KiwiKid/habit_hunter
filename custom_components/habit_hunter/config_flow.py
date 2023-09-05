@@ -49,8 +49,8 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
     @staticmethod
     @callback
-    def async_get_options_flow():
-        return HabitHunterOptionsFlowHandler()
+    def async_get_options_flow(config_entry):
+        return HabitHunterOptionsFlowHandler(config_entry)
 
     async def _show_config_form(self, user_input):  # pylint: disable=unused-argument
         """Show the configuration form to edit location data."""
@@ -79,7 +79,7 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 class HabitHunterOptionsFlowHandler(config_entries.OptionsFlow):
     """Config flow options handler for habit_hunter."""
 
-    def __init__(self, ):
+    def __init__(self, config_entry):
         """Initialize HACS options flow."""
         self.config_entry = config_entry
         self.options = dict(config_entry.options)
