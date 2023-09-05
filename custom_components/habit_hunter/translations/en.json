@@ -6,7 +6,10 @@
         "description": "If you need help with the configuration have a look here: https://github.com/KiwiKid/habit_hunter",
         "data": {
           "username": "Username",
-          "password": "Password"
+          "password": "Password",
+          "name": "Habit Name",
+          "reset_value": "Reset Value",
+          "reset_unit": "Reset Unit (days, months, years)"
         }
       }
     },
@@ -23,7 +26,8 @@
         "data": {
           "binary_sensor": "Binary sensor enabled",
           "sensor": "Sensor enabled",
-          "switch": "Switch enabled"
+          "switch": "Switch enabled",
+          "switch2": "Switch enabled 2"
         }
       }
     }

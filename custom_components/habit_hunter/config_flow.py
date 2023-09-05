@@ -59,13 +59,6 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema({
                 vol.Required(CONF_USERNAME): str
                 , vol.Required(CONF_PASSWORD): str
-                , vol.Optional('objects_list', default=[]): vol.All([
-                    vol.Schema({
-                        vol.Required('name'): str,
-                        vol.Required('reset_value'): int,
-                        vol.Required('reset_unit'): vol.In(['days', 'months', 'years'])
-                })
-            ])
                 }
             ),
             errors=self._errors,
@@ -86,10 +79,11 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 class HabitHunterOptionsFlowHandler(config_entries.OptionsFlow):
     """Config flow options handler for habit_hunter."""
 
-    def __init__(self, config_entry):
+    def __init__(self, ):
         """Initialize HACS options flow."""
         self.config_entry = config_entry
         self.options = dict(config_entry.options)
+        self.habits = dict(config_entry.habits)
 
     async def async_step_init(self, user_input=None):  # pylint: disable=unused-argument
         """Manage the options."""
@@ -103,12 +97,15 @@ class HabitHunterOptionsFlowHandler(config_entries.OptionsFlow):
 
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema(
-                {
-                    vol.Required(x, default=self.options.get(x, True)): bool
-                    for x in sorted(PLATFORMS)
-                }
-            ),
+            data_schema=vol.Schema({
+                **{
+                    vol.Required(x, default=self.habits.get(x, True)): bool
+                    for x in self.habits
+                },
+                vol.Required('name'): str,
+                vol.Required('reset_value'): int,
+                vol.Required('reset_unit'): vol.In(['days', 'months', 'years'])
+            }),
         )
 
     async def _update_options(self):
