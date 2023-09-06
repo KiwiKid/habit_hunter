@@ -8,5 +8,8 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "python.analysis.extraPaths": [
+    "/home/gregcummingpersonal/src/local/habit-hunter/test/lib/python3.9/site-packages/homeassistant"
+  ]
 }

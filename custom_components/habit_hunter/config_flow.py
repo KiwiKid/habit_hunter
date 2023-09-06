@@ -96,10 +96,10 @@ class HabitHunterOptionsFlowHandler(config_entries.OptionsFlow):
             step_id="user",
             data_schema=vol.Schema(
                 {
-                    **{
-                        vol.Required(x, default=self.habits.get(x, True)): bool
-                        for x in self.habits
-                    },
+                    #             **{
+                    #                 vol.Required(x, default=self.habits.get(x, True)): bool
+                    #                 for x in self.habits
+                    #             },
                     vol.Required("name"): str,
                     vol.Required("reset_value"): int,
                     vol.Required("reset_unit"): vol.In(["days", "months", "years"]),
