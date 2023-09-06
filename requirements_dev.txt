@@ -1,2 +1,3 @@
 homeassistant
 numpy
+pytest-homeassistant-custom-component
