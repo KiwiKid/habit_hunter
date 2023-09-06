@@ -61,7 +61,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
             )
 
     entry.add_update_listener(async_reload_entry)
-    entry.habits = {}
     return True
 
 

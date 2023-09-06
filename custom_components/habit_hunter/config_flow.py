@@ -80,7 +80,7 @@ class HabitHunterOptionsFlowHandler(config_entries.OptionsFlow):
         """Initialize HACS options flow."""
         self.config_entry = config_entry
         self.options = dict(config_entry.options)
-        self.habits = dict(config_entry.habits)
+        # self.habits = dict(config_entry.habits)
 
     async def async_step_init(self, user_input=None):  # pylint: disable=unused-argument
         """Manage the options."""
