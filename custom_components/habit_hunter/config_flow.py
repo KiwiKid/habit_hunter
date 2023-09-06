@@ -10,7 +10,7 @@ from .const import CONF_PASSWORD
 from .const import CONF_USERNAME
 from .const import DOMAIN
 
-PLATFORM_SCHEMA = cv.empty_config_schema
+PLATFORM_SCHEMA = cv.PLATFORM_SCHEMA_BASE
 
 
 class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
