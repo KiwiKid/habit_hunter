@@ -5,7 +5,6 @@ from homeassistant.core import callback
 from homeassistant.helpers import config_validation as cv
 
 from .api import HabitHunterApiClient
-from .config_flow import async_create_clientsession
 from .const import CONF_PASSWORD
 from .const import CONF_USERNAME
 from .const import DOMAIN
