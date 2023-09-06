@@ -2,7 +2,7 @@
   "domain": "habit_hunter",
   "name": "Habit Hunter",
   "version": "0.1.6",
-  "iot_class": "sensor",
+  "iot_class": "calculated",
   "documentation": "https://github.com/KiwiKid/habit_hunter",
   "issue_tracker": "https://github.com/KiwiKid/habit_hunter/issues",
   "dependencies": [],
