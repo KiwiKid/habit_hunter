@@ -94,3 +94,10 @@ Code template was mainly taken from [@Ludeeus](https://github.com/ludeeus)'s [in
 [releases-shield]: https://img.shields.io/github/release/KiwiKid/habit_hunter.svg?style=for-the-badge
 [releases]: https://github.com/KiwiKid/habit_hunter/releases
 [user_profile]: https://github.com/KiwiKid
+
+```
+python -m venv test
+source test/bin/activate
+pip install -r requirements_test.txt
+pytest test
+```

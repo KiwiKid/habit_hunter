@@ -2,10 +2,8 @@
 import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
-from homeassistant.helpers.aio import http_client 
-import async_create_clientsession
 from homeassistant.helpers import config_validation as cv
-
+from .config_flow import async_create_clientsession
 from .api import HabitHunterApiClient
 from .const import CONF_PASSWORD
 from .const import CONF_USERNAME
@@ -20,7 +18,7 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL
-    
+
     def __init__(self):
         """Initialize."""
         self._errors = {}
@@ -60,7 +58,7 @@ class HabitHunterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema({
                 vol.Required(CONF_USERNAME): str
                 , vol.Required(CONF_PASSWORD): str
-                }
+            }
             ),
             errors=self._errors,
         )
