@@ -2,7 +2,8 @@
 import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
+from homeassistant.helpers.aio import http_client 
+import async_create_clientsession
 from homeassistant.helpers import config_validation as cv
 
 from .api import HabitHunterApiClient
