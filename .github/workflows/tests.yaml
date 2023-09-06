@@ -82,4 +82,5 @@ jobs:
             --durations=10 \
             -n auto \
             -p no:sugar \
+            --cov-report=term-missing:coverage_report.txt
             tests
