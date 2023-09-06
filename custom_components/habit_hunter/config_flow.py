@@ -9,7 +9,6 @@ from .config_flow import async_create_clientsession
 from .const import CONF_PASSWORD
 from .const import CONF_USERNAME
 from .const import DOMAIN
-from .const import PLATFORMS
 
 PLATFORM_SCHEMA = cv.PLATFORM_SCHEMA
 
